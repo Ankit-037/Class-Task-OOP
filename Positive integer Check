@@ -1,0 +1,24 @@
+
+package ankit.positiveintegercheck;
+import java.util.Scanner;
+public class Positiveintegercheck {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter a number: ");
+
+        if (sc.hasNextInt()) {
+            int num = sc.nextInt();
+
+            if (num > 0) {
+                System.out.println("Positive Integer");
+            } else {
+                System.out.println("Not a Positive Integer");
+            }
+        } else {
+            System.out.println("Input is not an integer");
+        }
+
+    }
+}
