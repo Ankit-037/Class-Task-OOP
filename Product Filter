@@ -1,0 +1,35 @@
+
+package ankit.productfilter;
+
+public class ProductFilter {
+      public void filterProducts(String category) {
+        System.out.println("Searching products in category: " + category);
+    }
+
+    public void filterProducts(double minPrice, double maxPrice) {
+        System.out.println("Searching products between price: " + minPrice + " and " + maxPrice);
+    }
+
+    public void filterProducts(String brand, String category) {
+        System.out.println("Searching products of brand: " + brand + " in category: " + category);
+    }
+
+    public void filterProducts(String category, double minPrice, double maxPrice) {
+        System.out.println("Searching products in category: " + category + " between price: " + minPrice + " and " + maxPrice);
+    }
+
+    public void filterProducts(String category, double minPrice, double maxPrice, String brand) {
+        System.out.println("Searching products in category: " + category + ", brand: " + brand + " between price: " + minPrice + " and " + maxPrice);
+    }
+
+    public static void main(String[] args) {
+
+ ProductFilter pf = new ProductFilter();
+
+        pf.filterProducts("electronics");
+        pf.filterProducts(100, 500);
+        pf.filterProducts("Nike", "fashion");
+        pf.filterProducts("electronics", 100, 500);
+        pf.filterProducts("electronics", 100, 500, "Apple");
+    }
+}
